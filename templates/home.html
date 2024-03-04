@@ -11,18 +11,26 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}}
+    <img class="img-responsive" id="banner" src="https://a1bc3c45-07c4-4c95-b0fb-d97e6e45dcbb-00-ojba47ulipp.pike.replit.dev/static/Home%20page%20banner.jpg">
     <div class="container">
     <h1 class = "text-center mt-2 mb-4">
       {{company_name}}</h1>
-    <img class="img-responsive" id="banner" src="https://a1bc3c45-07c4-4c95-b0fb-d97e6e45dcbb-00-ojba47ulipp.pike.replit.dev/static/Home%20page%20banner.jpg">
-    <h2 class="text-center mt-2 mb-4"> About Talent Quest Hub </h2>
+      <div class ="row" style="margin-bottom:16px">
+        <div class = "col-md-6">
     <p class="lead">
       At Talent Quest Hub, we're passionate about connecting talented individuals with exciting career opportunities. Our platform serves as a dynamic hub where job seekers can embark on their quest for fulfilling careers, and employers can discover top-tier talent to drive their organizations forward. With our intuitive interface and robust search capabilities, navigating the job market has never been easier. Whether you're a seasoned professional looking to take the next step in your career journey or an employer seeking exceptional talent, Talent Quest Hub provides the tools and resources you need to succeed. Join our vibrant community today and unlock a world of endless possibilities in the realm of talent acquisition and career advancement.
     </p>
+        </div>
+        <div class = " d-none d-md-block col-md-6">
+        <img src = "/static/working employees.jpg" style = "height:320px;border-radius:4px;">
+        </div>
+      </div>
     <h2 class="text-center mt-2 mb-4"> Job Openings</h2>
     <div>
       {% for job in jobs %}
@@ -30,8 +38,8 @@
       {% endfor %}
     </div>
     <div class="text-center">
-    <button class="btn btn-primary btn-lg""> Contact us </button>
-      <p class ="mt-4">copyright 2024, Talent Quest Hub </p>
+    <a class="btn btn-primary btn-lg" href ="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Openings&body=My%20name%20%3A%20%3C%20Enter%20Your%20Name%20%3E%0D%0A%0D%0AMy%20Question%20%3A%20%3C%20Enter%20Your%20Queries%20%3E%0D%0A"> Contact us </a>
     </div>
+      {% include 'footer.html' %}
   </body>
 </html>
