@@ -1,5 +1,7 @@
 from sqlalchemy import create_engine ,text
-engine = create_engine("mysql+pymysql://root:root1225@talentquestdb.c5a4k64wsbb7.ap-south-1.rds.amazonaws.com/talentquestdb?charset=utf8mb4")
+import os
+db_connection_string = os.environ['DB_CONNECTION_STRING']
+engine = create_engine(db_connection_string)
 
 def load_jobs_from_db():
   with engine.connect() as conn:
