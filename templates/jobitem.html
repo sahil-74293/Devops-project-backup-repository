@@ -7,7 +7,13 @@
     {% endif %}
   </div>
   <div class="col-3">
-    <a href= "mailto:hello@talentquest.ai?subject=application%20for%20{{jobs['title']}}&body=My%20name%20%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20Resume%20link%20%3A%20%3Cresume%20link%3E%0D%0A%0D%0AMy%20linkedin%20Profile%20%3A%20%3C%20linkedin%20link%20%3E"type="button" class="btn btn-primary" style="float: right;">Apply</a>
+    <style>
+    .btn.btn-outline-primary {
+        background-color: lightgrey;
+        border: 1px solid #333333;
+    }
+</style><a href= "/job/{{job['id']}}" type="button" style="float:right" class="btn btn-outline-primary">Apply</a>
+
   </div>
 </div>
 
